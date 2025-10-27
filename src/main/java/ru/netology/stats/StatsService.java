@@ -40,7 +40,7 @@ public class StatsService {
     public long averageSumSales(long[] sales) {
         long totalSumSales = 0;
         for (int i = 0; i < sales.length; i++) {
-            totalSumSales = totalSumSales + sales[i];
+            totalSumSales = sumSales(sales);
 
         }
         return totalSumSales / sales.length;
@@ -50,9 +50,9 @@ public class StatsService {
     public long minAverageSumSalesMonth(long[] sales) {
         long totalSumSales = 0;
         for (int i = 0; i < sales.length; i++) {
-            totalSumSales = totalSumSales + sales[i];
+            totalSumSales = sumSales(sales);
         }
-        long averageSales = totalSumSales / sales.length;
+        long averageSales = averageSumSales(sales);
         long minAverageSumSalesMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < averageSales) {
@@ -68,9 +68,9 @@ public class StatsService {
     public long overAverageSumSalesMonth(long[] sales) {
         long totalSumSales = 0;
         for (int i = 0; i < sales.length; i++) {
-            totalSumSales = totalSumSales + sales[i];
+            totalSumSales = sumSales(sales);
         }
-        long averageSales = totalSumSales / sales.length;
+        long averageSales = averageSumSales(sales);
         long overAverageSumSalesMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > averageSales) {
