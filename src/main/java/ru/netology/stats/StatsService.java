@@ -48,7 +48,6 @@ public class StatsService {
 
 
     public long minAverageSumSalesMonth(long[] sales) {
-        long totalSumSales = sumSales(sales);
         long averageSales = averageSumSales(sales);
         long minAverageSumSalesMonth = 0;
         for (int i = 0; i < sales.length; i++) {
@@ -63,7 +62,6 @@ public class StatsService {
 
 
     public long overAverageSumSalesMonth(long[] sales) {
-        long totalSumSales = sumSales(sales);
         long averageSales = averageSumSales(sales);
         long overAverageSumSalesMonth = 0;
         for (int i = 0; i < sales.length; i++) {
